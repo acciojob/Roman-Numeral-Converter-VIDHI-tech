@@ -47,7 +47,7 @@ function convertToRoman(num) {
   };
 
   if (isNaN(num) || num < 0 || num > 100000) {
-    return "Invalid input. Please provide a number between 0 and 100000.";
+    return { roman: "Invalid input. Please provide a number between 0 and 100000." };
   }
 
   let romanNumeral = '';
@@ -62,12 +62,11 @@ function convertToRoman(num) {
     }
   }
 
-  return romanNumeral;
+  return { roman: romanNumeral };
 }
 
 // Example usage:
-console.log(convertToRoman(14)); // Output: XIV
-console.log(convertToRoman(798)); // Output: DCCXCVIII
+console.log(convertToRoman(45)); // Output: { roman: 'XLV' }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
